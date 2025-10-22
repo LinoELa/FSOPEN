@@ -1,0 +1,50 @@
+# 🧰 Scripts comunes para React + TypeScript + Redux + Toolkit
+
+# Los comandos se ejecutan con:
+# npm run <comando>
+
+scripts:
+  # 🏁 --- Desarrollo ---
+  dev: vite # Inicia el servidor de desarrollo
+  start: vite # Alias de dev (compatible con CRA/Vite)
+  preview: vite preview # Previsualiza la build localmente
+
+  # 🏗️ --- Build / Producción ---
+  build: vite build # Compila la aplicación para producción
+  serve: vite preview # Sirve la build en modo local
+  clean: rimraf dist # Limpia la carpeta dist (requiere rimraf)
+
+  # 🧪 --- Testing ---
+  test: vitest # Ejecuta los tests con Vitest
+  test:watch: vitest --watch # Ejecuta tests en modo vigilancia
+  test:coverage: vitest run --coverage # Genera reporte de cobertura
+  test:e2e: playwright test # Tests de extremo a extremo (si usas Playwright)
+
+  # 🧹 --- Linting / Formateo ---
+  lint: eslint . --ext .ts,.tsx # Analiza código con ESLint
+  lint:fix: eslint . --fix # Corrige errores automáticamente
+  format: prettier --write . # Formatea código con Prettier
+  typecheck: tsc --noEmit # Verifica tipos de TypeScript sin compilar
+
+  # 🧩 --- Redux / Configuración ---
+  redux:generate-slice: plop # (opcional) Genera un slice de Redux automáticamente
+  redux:check-store: node scripts/checkStore.js # (custom) Validación de store global
+
+  # 📦 --- Dependencias ---
+  deps:audit: npm audit # Escanea vulnerabilidades
+  deps:update: npm-check -u # Actualiza dependencias de forma interactiva
+  deps:outdated: npm outdated # Muestra dependencias obsoletas
+
+  # 🧱 --- Documentación / Configuración ---
+  docs: typedoc --out docs src # Genera documentación con TypeDoc
+  analyze: source-map-explorer dist/*.js # Analiza tamaño del bundle
+  env: node -p "process.env" # Muestra variables de entorno activas
+
+  # 🚀 --- Deploy / Producción ---
+  deploy: gh-pages -d dist # Despliega en GitHub Pages
+  vercel: vercel --prod # Despliega en Vercel
+  netlify: netlify deploy --prod # Despliega en Netlify
+
+  # 🧠 --- Mantenimiento ---
+  check: npm run lint && npm run typecheck && npm test
+  prepare: husky install # Inicializa hooks de Git (Husky)
