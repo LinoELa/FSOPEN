@@ -1,5 +1,30 @@
 # 🧰 Scripts comunes para React + TypeScript + Redux + Toolkit
 
+# branches.yml
+settings:
+  remote: origin          # remoto al que empujar
+  push_upstream: true     # hacer 'git push -u' la primera vez
+  user_name: "Automation Bot"
+  user_email: "bot@example.com"
+
+branches:
+  # Basadas en main
+  - name: Helsinki
+    from: main
+
+  - name: 30Days/root
+    from: main
+
+  # Hijas jerárquicas (todas desde 30Days/root)
+  - name: 30Days/day-1
+    from: 30Days/root
+  - name: 30Days/day-2
+    from: 30Days/root
+  # añade más:
+  # - name: 30Days/day-3
+  #   from: 30Days/root
+
+
 # Los comandos se ejecutan con:
 # npm run <comando>
 
