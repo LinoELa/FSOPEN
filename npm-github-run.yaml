@@ -1,5 +1,55 @@
 # 🧰 Scripts comunes para React + TypeScript + Redux + Toolkit
 
+# branches.yml
+
+git_flow:
+  branches:
+    # Basadas en main
+    - name: Helsinki
+      from: main
+
+    - name: 30Days/root
+      from: main
+
+    # Hijas jerárquicas (todas desde 30Days/root)
+    - name: 30Days/day-1
+      from: 30Days/root
+    - name: 30Days/day-2
+      from: 30Days/root
+
+  rename_root:
+    description: Renombrar 30Days a 30Days/root
+    commands:
+      - git checkout 30Days
+      - git branch -m 30Days/root
+      - git push origin :30Days
+      - git push -u origin 30Days/root
+
+  create_day:
+    description: Crear un nuevo día desde 30Days/root
+    commands:
+      - git checkout -b 30Days/day-3 30Days/root
+      - git push -u origin 30Days/day-3
+
+  list_branches:
+    description: Listar ramas en árbol
+    commands:
+      - git fetch --all --prune
+      - git branch --list
+
+  delete_day:
+    description: Borrar una rama local/remota
+    commands:
+      - git branch -D 30Days/day-2
+      - git push origin :30Days/day-2
+
+  restore_stash:
+    description: Recuperar último stash
+    commands:
+      - git stash list
+      - git stash show -p
+      - git stash pop
+
 # Los comandos se ejecutan con:
 # npm run <comando>
 
