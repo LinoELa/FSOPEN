@@ -8,11 +8,6 @@ Cada una tiene su propio enfoque:
 - **una en el desarrollo Full Stack con React, Node.js y APIs**
 - **mejorar la base sólida de JavaScript puro**.
 
----
-
-## 📁 Estructura del Repositorio
-
----
 
 ### 🧩 Full Stack Open
 
