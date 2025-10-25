@@ -13,6 +13,9 @@ const resultDeclaration = declararion(2, 6);
 console.log(resultDeclaration);
 // result ahora es 12
 
+const bornYear = () => {
+  return new Date().getFullYear() - age;
+};
 console.log("--------- funcion Expresion ");
 
 const expresion = function (a, b) {
@@ -45,6 +48,8 @@ const square = (p) => {
 
 console.log("--------- Funcion  inline : De una sola expresion -------------");
 const squareInline = (p) => p * p;
+
+const bornYearFn = () => new Date().getFullYear() - age;
 
 // Esta forma es particularmente útil cuando se manipulan arrays,
 // por ejemplo, cuando se usa el método map:

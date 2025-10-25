@@ -1,0 +1,14 @@
+export default function Display({ counter, label = "Contador" }) {
+  return (
+    <div style={{ 
+      fontSize: 18, 
+      fontWeight: "bold",
+      padding: "10px",
+      backgroundColor: "#f5f5f5",
+      borderRadius: 4,
+      marginBottom: 10
+    }}>
+      {label}: {counter}
+    </div>
+  );
+}
