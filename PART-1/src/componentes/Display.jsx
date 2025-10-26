@@ -4,7 +4,7 @@ export default function Display({ counter, label = "Contador" }) {
       fontSize: 18, 
       fontWeight: "bold",
       padding: "10px",
-      backgroundColor: "#f5f5f5",
+      backgroundColor: "#742222ff",
       borderRadius: 4,
       marginBottom: 10
     }}>

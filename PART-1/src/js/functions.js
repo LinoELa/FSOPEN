@@ -3,7 +3,7 @@ console.log("---------  -------------");
 
 // 2 Unicas formar de declarar una function
 
-console.log("--------- funcion Declaracion ");
+console.log("--------- funcion Declaracion ---------  ");
 
 function declararion(a, b) {
   return a * b;
@@ -16,7 +16,7 @@ console.log(resultDeclaration);
 const bornYear = () => {
   return new Date().getFullYear() - age;
 };
-console.log("--------- funcion Expresion ");
+console.log("--------- funcion Expresion ---------  ");
 
 const expresion = function (a, b) {
   return (a + b) / 2;
@@ -26,8 +26,7 @@ const resultExpresion = expresion(2, 5);
 console.log(resultExpresion);
 
 // result ahora es 3.5
-console.log("---------  -------------");
-
+// ---------  ---------  ---------  ---------  ---------   -------------
 // definir funcion
 const sum = (p1, p2) => {
   console.log(p1);

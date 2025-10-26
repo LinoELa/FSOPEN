@@ -1,3 +1,5 @@
+//-------------------------------------------------------------------------------------------------------------------
+
 // App.jsx
 import { useState } from "react";
 import Nav from "./componentes/Nav.jsx";
@@ -65,6 +67,8 @@ const SECTIONS = [
   },
   { key: "useState-con-logs", label: "useState con Logs", category: "Hooks" },
   { key: "useEffect-multiple", label: "useEffect Múltiple", category: "Hooks" },
+
+  // LINO CONTADOR
 ];
 
 export default function App() {
@@ -138,3 +142,9 @@ export default function App() {
     </div>
   );
 }
+
+// const Contador = () => {
+//   const []
+
+// }
+//-------------------------------------------------------------------------------------------------------------------

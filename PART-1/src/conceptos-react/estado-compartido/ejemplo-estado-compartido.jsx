@@ -1,34 +1,34 @@
 import { useState } from "react";
-import Button from "../../componentes/Button.jsx";
-import Display from "../../componentes/Display.jsx";
 
 // Componente Display reutilizable
 const ContadorDisplay = ({ valor, etiqueta }) => (
-  <div style={{ 
-    fontSize: 18, 
-    fontWeight: "bold",
-    padding: "10px",
-    backgroundColor: "#e8f5e8",
-    borderRadius: 4,
-    marginBottom: 10,
-    textAlign: "center"
-  }}>
+  <div
+    style={{
+      fontSize: 18,
+      fontWeight: "bold",
+      padding: "10px",
+      backgroundColor: "#e8f5e8",
+      borderRadius: 4,
+      marginBottom: 10,
+      textAlign: "center",
+    }}
+  >
     {etiqueta}: {valor}
   </div>
 );
 
 // Componente Button reutilizable
 const BotonContador = ({ onClick, texto, color = "#007bff" }) => (
-  <button 
+  <button
     onClick={onClick}
-    style={{ 
-      marginRight: 8, 
+    style={{
+      marginRight: 8,
       padding: "8px 16px",
       borderRadius: 4,
       border: "none",
       backgroundColor: color,
       color: "white",
-      cursor: "pointer"
+      cursor: "pointer",
     }}
   >
     {texto}
@@ -51,7 +51,7 @@ export default function EjemploEstadoCompartido() {
     <div>
       <h3>Ejemplo: Estado Compartido</h3>
       <p>Múltiples componentes comparten el mismo patrón de estado:</p>
-      
+
       <div style={{ display: "flex", gap: 20 }}>
         <div style={{ flex: 1 }}>
           <h4>Contador 1</h4>
@@ -77,9 +77,15 @@ export default function EjemploEstadoCompartido() {
       <div style={{ marginTop: 20 }}>
         <h4>Ventajas del estado compartido:</h4>
         <ul>
-          <li><strong>Reutilización:</strong> Componentes reutilizables</li>
-          <li><strong>Consistencia:</strong> Mismo comportamiento en toda la app</li>
-          <li><strong>Mantenibilidad:</strong> Cambios centralizados</li>
+          <li>
+            <strong>Reutilización:</strong> Componentes reutilizables
+          </li>
+          <li>
+            <strong>Consistencia:</strong> Mismo comportamiento en toda la app
+          </li>
+          <li>
+            <strong>Mantenibilidad:</strong> Cambios centralizados
+          </li>
         </ul>
       </div>
     </div>
