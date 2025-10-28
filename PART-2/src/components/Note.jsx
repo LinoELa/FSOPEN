@@ -1,6 +1,6 @@
 const Note = ({ note }) => {
 
-  console.log('App work 3')
+  console.log('App work Note')
 
   return <li>{note.content}</li>;
 };

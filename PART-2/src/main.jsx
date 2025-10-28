@@ -2,7 +2,6 @@ import { createRoot } from "react-dom/client";
 // import "./index.css";
 import App from "./App.jsx";
 
-// ===================================================================================
 /*
 createRoot(document.getElementById("root")).render(
   // <StrictMode>
@@ -10,7 +9,8 @@ createRoot(document.getElementById("root")).render(
   //{ </StrictMode>, }
 );
 */
-// ===================================================================================
+
+// -----------------------------------------------------------------------------------
 
 // Rederizado de componentes
 
@@ -28,18 +28,6 @@ const notes = [
   },
 ];
 
-createRoot(document.getElementById("root")).render(
-  // <StrictMode>
-  <App notes={notes} />
-  //{ </StrictMode>, }
-);
+createRoot(document.getElementById("root")).render(<App notes={notes} />);
 
 // -----------------------------------------------------------------------------------
-// MAPS
-const result = notes.map((note) => note.id);
-const result1 = notes.map((note) => <li key={note.id}>{note.content}</li>);
-
-console.log(result);
-console.log(result1);
-
-// ===================================================================================
