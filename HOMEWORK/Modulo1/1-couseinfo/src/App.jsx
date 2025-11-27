@@ -3,7 +3,7 @@ import "./App.css";
 // -----------------------------------------------------------
 
 const Header = (props) => {
-  console.log("Entrada Header");
+  console.log("Header");
 
   return (
     <div>
@@ -14,26 +14,51 @@ const Header = (props) => {
 
 // -----------------------------------------------------------
 
-const Content = (props) => {
+const Part = ({ objetoNombre, objetoExercise }) => {
+  console.log("Part");
+
   return (
     <>
       <p>
-        {props.part1} {props.exercises1}
-      </p>
-      <p>
-        {props.part2} {props.exercises2}
-      </p>
-      <p>
-        {props.part3} {props.exercises3}
+        {objetoNombre} {objetoExercise}
       </p>
     </>
   );
 };
 
-const Total = (props) => {
+// -----------------------------------------------------------
+
+const Content = ({ objetoContent }) => {
+  console.log("Content");
+
   return (
     <>
-      <p>Total : {props.total}</p>
+      <Part
+        objetoNombre={objetoContent[0].nombre}
+        objetoExercise={objetoContent[0].exercises}
+      />
+      <Part
+        objetoNombre={objetoContent[1].nombre}
+        objetoExercise={objetoContent[1].exercises}
+      />
+      <Part
+        objetoNombre={objetoContent[2].nombre}
+        objetoExercise={objetoContent[2].exercises}
+      />
+    </>
+  );
+};
+
+const Total = ({ ObjetoTotal }) => {
+  console.log("Total");
+
+  const total =
+    ObjetoTotal[0].exercises +
+    ObjetoTotal[1].exercises +
+    ObjetoTotal[2].exercises;
+  return (
+    <>
+      <p>Total : {total}</p>
     </>
   );
 };
@@ -42,34 +67,34 @@ const Total = (props) => {
 
 function App() {
   const course = "Half Stack application development";
-  console.log("Salida Header");
 
-  const part1 = "Fundamentals of React";
-  const exercises1 = 10;
-  const part2 = "Using props to pass data";
-  const exercises2 = 7;
-  const part3 = "State of a component";
-  const exercises3 = 14;
+  const partsApp = [
+    { nombre: "Fundamentals of React", exercises: 10 },
+    { nombre: "Using props to pass data", exercises: 7 },
+    { nombre: "State of a component", exercises: 14 },
+  ];
+  console.log("App");
 
   return (
     <div>
       <Header course1={course} />
-      <Content
-        part1={part1}
-        part2={part2}
-        part3={part3}
-        exercises1={exercises1}
-        exercises2={exercises2}
-        exercises3={exercises3}
-      />
-      <Total total={exercises1 + exercises2 + exercises3} />
+      <Content objetoContent={partsApp} />
+      <Total ObjetoTotal={partsApp} />
     </div>
   );
 }
 
 export default App;
 
-//
+// const Content = ... {
+//   return (
+//     <div>
+//       <Part .../>
+//       <Part .../>
+//       <Part .../>
+//     </div>
+//   )
+// }
 
 // const App = () => {
 //   // const-definitions
