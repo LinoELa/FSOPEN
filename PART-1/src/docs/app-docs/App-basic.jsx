@@ -62,6 +62,7 @@ export function AppProps() {
   return (
     <main>
       <h1>Props</h1>
+	  <hello>
       <HelloProps name={name} age={age} time={now} />
       <HelloProps name="Antonio" age={20 - 5} />
     </main>

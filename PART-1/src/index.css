@@ -84,8 +84,8 @@ body {
   position: absolute;
   z-index: 1;
   width: 30vw;
-  height: fit-content;
-  height: -moz-max-content;
+  /* height: fit-content;
+  height: -moz-max-content; */
   top: 50vh;
   left: 50vw;
   transform: translate(-50%, -50%);
@@ -118,3 +118,4 @@ body {
   cursor: pointer;
   display: block;
   margin: 0 auto;
+}
